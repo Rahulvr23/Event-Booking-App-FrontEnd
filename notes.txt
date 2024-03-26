@@ -1,0 +1,111 @@
+                            Backend for PROJECT FAIR
+                        ---------------------------------
+
+    1. Create a folder for backend - project-fair-backend
+    2. Create package.json file - npm init -y
+    3. Install 3rd party packages
+
+    Express - npm i express
+    ->Express.js is the most popular backend framework for Node.js, and it is an extensive part of the JavaScript ecosystem.
+    ->It is designed to build single-page, multi-page, and hybrid web applications
+    -> it has also become the standard for developing backend applications with Node.js, and it is the backend part of something known as the MERN stack.
+
+    ->The MERN is a free and open-source JavaScript software stack for building dynamic websites and web applications that has the following components:
+
+    ->MongoDB: MongoDB is the standard NoSQL database
+    ->Express.js: The default web applications framework for building web apps
+    ->React.js: The JavaScript framework used for building front-end web applications
+    ->Node.js: JavaScript engine used for scalable server-side and networking applications.
+
+    CORS - npm i cors 
+    ->The word CORS stands for “Cross-Origin Resource Sharing”. Cross-Origin Resource Sharing is an HTTP-header based mechanism implemented by the browser which allows a server or an API(Application Programming Interface) to indicate any origins (different in terms of protocol, hostname, or port) other than its origin from which the unknown origin gets permission to access and load resources. The cors package available in the npm registry is used to tackle CORS errors in a Node.js application.
+
+    Environment variables are variables external to our application which reside in the OS or the container of the app is running in. An environment variable is simply a name mapped to a value.
+    Data which changes depending on the environment your app is running on should be set as environment variables. Some common examples are:
+
+    -HTTP Port and Address
+    -Database, cache, and other storage connection information
+    -Location of static files/folders
+
+    The dotenv Library
+    This library does one simple task: loads environment variables from a .env file into the process.env variable in Node.jsThe dotenv Library
+
+
+                        MVC Architecture
+                     ------------------------
+    What is Model-View-Controller?
+
+    MVC is simply a design or architectural pattern used in software engineering. 
+    While this isn’t a hard rule, but this pattern helps developers focus on a particular aspect of their application, one step at a time.
+
+    The main goal of MVC is to split large applications into specific sections that have their own individual purpose.
+
+    It also allows developers to logically structure applications in a secure way, which we will show in this tutorial. But first, let’s break down what each aspect of the pattern provides.
+
+    Model
+    As the name implies, a model is a design or structure. 
+    In the case of MVC, the model determines how a database is structured, defining a section of the application that interacts with the database. 
+    This is where we will define the properties of a user that will be store in our database.
+    The controller accesses the database through the model. You could say that the model is the heart of the application.
+
+    View
+    The view is where end users interact within the application.
+    Simply put, this is where all the HTML template files go.
+
+    Controller
+    The controller interacts with the model and serves the response and functionality to the view. 
+    When an end user makes a request, it’s sent to the controller which interacts with the database.
+
+    You can think of the controller as a waiter in a restaurant that handles customers’ orders, which in this case is the view. The waiter then goes to the kitchen, which is the model/database, and gets food to serve the customers, which is the controller handling the request.
+
+
+    JWT Token  - Web security 
+    ---------------------------------
+    Installation - npm i jsonwebtoken
+
+    Import - const jwt = require("jsonwebtoken")
+
+    Token Creation  - const token = jwt.sign({userId :user._id},"superkey2024")
+
+    Token Verification - 
+
+    We need a middleware
+
+    Middleware 
+    ------------------------------
+    Middleware functions are functions that have access to the request object (req), the response object (res), and the next middleware function in the application’s request-response cycle. 
+    ->The next middleware function is commonly denoted by a variable named next.
+
+    Middleware functions can perform the following tasks:
+    ->Execute any code.
+    ->Make changes to the request and the response objects.
+    ->End the request-response cycle.
+    ->Call the next middleware function in the stack.
+    
+    If the current middleware function does not end the request-response cycle, it must call next() to pass control to the next middleware function. Otherwise, the request will be left hanging.
+
+    An Express application can use the following types of middleware:
+
+        =>Application-level middleware
+        =>Router-level middleware
+        =>Error-handling middleware
+        =>Built-in middleware express.json()
+        =>Third-party middleware
+
+
+    Multer
+    --------
+    Multer is a node.js middleware for handling multipart/form-data, which is primarily used for uploading files. It is written on top of busboy for maximum efficiency
+    npm i multer
+
+
+    git
+    ------
+    git init
+    git add .
+    git commit -m "backend"
+    create repo -compy 6 line
+    git push origin master
+    -------------------------
+    front end
+    npm run build  
